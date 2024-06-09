@@ -1,0 +1,121 @@
+.body {
+  background-color: #dcdcdc;
+}
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.choices {
+  margin: 20px 0;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #dd9700;
+}
+button:hover {
+  background-color: #dcdcdc;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.scores {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 30px;
+  display: flex;
+}
+
+.player {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+.computer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+p {
+  margin: 10px 0;
+}
+.numbers {
+  color: #000000;
+  font-weight: bold;
+  width: 45px;
+  height: 45px;
+  /* background-color: #ffffff; */
+  background: rgb(0, 212, 255);
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 1) 0%,
+    rgb(191, 191, 203) 52%,
+    rgb(255, 255, 255) 100%
+  );
+  border: solid #000000 3px;
+  border-radius: 50%;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  display: block;
+}
+
+.win {
+  color: green;
+  -webkit-text-stroke-color: rgb(121, 255, 68);
+  -webkit-text-stroke-width: 0.5px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.lose {
+  color: rgba(255, 0, 0, 0.6);
+  -webkit-text-stroke-color: rgb(248, 133, 133);
+  -webkit-text-stroke-width: 0.5px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.draw {
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-text-stroke-color: rgb(255, 186, 49);
+  -webkit-text-stroke-width: 0.5px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.game-over {
+  margin-top: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px;
+}
