@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rhames86/piedra_papel_tijeras/static/css/main.5bf8eda9.css",
+    "main.js": "/rhames86/piedra_papel_tijeras/static/js/main.8b40ab8b.js",
+    "index.html": "/rhames86/piedra_papel_tijeras/index.html",
+    "main.5bf8eda9.css.map": "/rhames86/piedra_papel_tijeras/static/css/main.5bf8eda9.css.map",
+    "main.8b40ab8b.js.map": "/rhames86/piedra_papel_tijeras/static/js/main.8b40ab8b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bf8eda9.css",
+    "static/js/main.8b40ab8b.js"
+  ]
+}
