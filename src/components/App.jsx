@@ -1,38 +1,38 @@
-import React, { useState } from "react";
-import "./App.css";
+import React, { useState } from 'react';
+import './App.css';
 
-const choices = ["Piedra", "Papel", "Tijeras"];
+const choices = ['Piedra', 'Papel', 'Tijeras'];
 const MAX_SCORE = 10;
 
 const getComputerChoice = () => {
-  const randomIndex = Math.floor(Math.random() * 3);
+  const randomIndex = Math.floor(Math.random() * choices.length);
   return choices[randomIndex];
 };
 
 const determineWinner = (playerChoice, computerChoice) => {
   if (playerChoice === computerChoice) {
-    return "Es un empate!";
+    return 'Es un empate!';
   } else if (
-    (playerChoice === "Piedra" && computerChoice === "Tijeras") ||
-    (playerChoice === "Papel" && computerChoice === "Piedra") ||
-    (playerChoice === "Tijeras" && computerChoice === "Papel")
+    (playerChoice === 'Piedra' && computerChoice === 'Tijeras') ||
+    (playerChoice === 'Papel' && computerChoice === 'Piedra') ||
+    (playerChoice === 'Tijeras' && computerChoice === 'Papel')
   ) {
-    return "¡Ganaste!";
+    return '¡Ganaste!';
   } else {
-    return "Perdiste! Intenta de nuevo";
+    return 'Perdiste! Intenta de nuevo';
   }
 };
 
 function App() {
-  const [playerChoice, setPlayerChoice] = useState("");
-  const [computerChoice, setComputerChoice] = useState("");
-  const [result, setResult] = useState("");
+  const [playerChoice, setPlayerChoice] = useState('');
+  const [computerChoice, setComputerChoice] = useState('');
+  const [result, setResult] = useState('');
   const [playerScore, setPlayerScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
-  const [winner, setWinner] = useState("");
+  const [winner, setWinner] = useState('');
 
-  const handleChoice = (choice) => {
+  const handleChoice = choice => {
     if (gameOver) return;
 
     const computerSelection = getComputerChoice();
@@ -41,37 +41,37 @@ function App() {
     setComputerChoice(computerSelection);
     setResult(gameResult);
 
-    if (gameResult === "¡Ganaste!") {
+    if (gameResult === '¡Ganaste!') {
       const newPlayerScore = playerScore + 1;
       setPlayerScore(newPlayerScore);
       if (newPlayerScore === MAX_SCORE) {
         setGameOver(true);
-        setWinner("¡Ganaste el juego!");
+        setWinner('¡Ganaste el juego!');
       }
-    } else if (gameResult === "Perdiste! Intenta de nuevo") {
+    } else if (gameResult === 'Perdiste! Intenta de nuevo') {
       const newComputerScore = computerScore + 1;
       setComputerScore(newComputerScore);
       if (newComputerScore === MAX_SCORE) {
         setGameOver(true);
-        setWinner("La computadora ganó el juego");
+        setWinner('La computadora ganó el juego');
       }
     }
   };
 
   const resultClass =
-    result === "¡Ganaste!"
-      ? "win"
-      : result === "Perdiste! Intenta de nuevo"
-      ? "lose"
-      : result === "Es un empate!"
-      ? "draw"
-      : "";
+    result === '¡Ganaste!'
+      ? 'win'
+      : result === 'Perdiste! Intenta de nuevo'
+      ? 'lose'
+      : result === 'Es un empate!'
+      ? 'draw'
+      : '';
 
   return (
     <div className="App">
       <h1>Piedra, Papel, Tijeras</h1>
       <div className="choices">
-        {choices.map((choice) => (
+        {choices.map(choice => (
           <button
             key={choice}
             onClick={() => handleChoice(choice)}
